@@ -1,95 +1,81 @@
-RetinaNet - AI-Driven Branding Identity Verification
+# RetinaNet - AI-Driven Branding Identity Verification
 
-📌 Project Overview
+## 📌 Project Overview
+This project leverages RetinaNet for detecting branding elements such as logos, colors, fonts, and UI components. It is part of the **The Brand Code (TBD)** initiative, aimed at automating branding guideline verification using computer vision and web scraping.
 
-RetinaNet is a deep learning-based object detection model fine-tuned to verify branding identity using AI. It automates branding guideline verification by detecting logos, colors, fonts, and UI components in images, ensuring consistency across digital assets.
+## 🚀 Features
+- **Object Detection**: Uses RetinaNet to detect branding elements.
+- **Automated Verification**: Integrates with CI/CD pipelines for compliance checking.
+- **Efficient Model Training**: Supports fine-tuning on custom datasets.
+- **Evaluation Metrics**: Computes mAP, precision, recall, and loss trends.
+- **Visualization**: Plots training loss and accuracy.
 
-🚀 Features
-
-Advanced Object Detection: Detects and classifies branding elements using RetinaNet.
-
-Custom Model Training: Fine-tuned RetinaNet and EfficientNet for high accuracy.
-
-Automated Branding Verification: Ensures compliance with branding guidelines.
-
-Integration with CI/CD Pipelines: Seamless deployment for continuous verification.
-
-📂 Directory Structure
-
+## 📂 Repository Structure
+```
 📦 RetinaNet
-├── 📁 dataset/             # Training and testing dataset
-├── 📁 models/              # Trained model checkpoints
-├── 📁 scripts/             # Training, inference, and evaluation scripts
-├── 📄 train.py             # Model training script
-├── 📄 inference.py         # Perform inference using trained models
-├── 📄 generate_report.py   # Generate performance metrics and plots
-├── 📄 requirements.txt     # Dependencies
-├── 📄 README.md            # Documentation
+├── 📁 data                # Dataset files
+├── 📁 models              # Trained models and checkpoints
+├── 📁 scripts             # Training, evaluation, and reporting scripts
+├── generate_report.py     # Script to visualize training metrics
+├── train.py               # Model training script
+├── evaluate.py            # Model evaluation script
+├── requirements.txt       # Dependencies
+└── README.md              # Project documentation
+```
 
-🛠 Installation
+## 🔧 Installation
+```bash
+# Clone the repository
+git clone https://github.com/Soumyojyotisaha/RetinaNet.git
+cd RetinaNet
 
-Clone the repository and install dependencies:
+# Install dependencies
+pip install -r requirements.txt
+```
 
-$ git clone https://github.com/Soumyojyotisaha/RetinaNet.git
-$ cd RetinaNet
-$ pip install -r requirements.txt
+## 📊 Training the Model
+```bash
+python train.py --epochs 10 --batch-size 8 --lr 0.001 --dataset data/train
+```
 
-🔥 Training the Model
+## 📈 Evaluating the Model
+```bash
+python evaluate.py --model models/retinanet_latest.pth --dataset data/test
+```
 
-To train the RetinaNet model, run:
+## 📉 Generating Reports
+```bash
+python generate_report.py
+```
 
-$ python train.py --epochs 10 --batch_size 16 --lr 0.001
+## 🔍 Example Outputs
+```
+📊 Training Loss Summary:
+   🔹 Final Loss: 0.1527
+   🔹 Min Loss: 0.1285
+   🔹 Max Loss: 0.8415
+   🔹 Mean Average Precision (mAP): 91.64%
+```
 
-🎯 Running Inference
+## 🛠️ Troubleshooting
+- **GitHub File Size Limit Error:** If you face issues with large `.pth` files, use Git Large File Storage (LFS):
+  ```bash
+  git lfs install
+  git lfs track "*.pth"
+  git add .gitattributes
+  git add models/retinanet_latest.pth
+  git commit -m "Track large model files"
+  git push origin main
+  ```
 
-Use the trained model to detect branding elements in images:
+## 🤝 Contributors
+- **Soumyojyoti Saha** ([@Soumyojyotisaha](https://github.com/Soumyojyotisaha))
+- **Kuriakose Rishaan Jacob**
+- **Sridharan Sriram**
+- **Prajapat Saumyaa**
 
-$ python inference.py --image_path path/to/image.jpg --model_path models/retinanet.pth
+## 📜 License
+This project is licensed under the MIT License. See `LICENSE` for details.
 
-📊 Evaluating Model Performance
-
-To generate evaluation reports (accuracy, loss, mAP, etc.):
-
-$ python generate_report.py
-
-🏆 Results
-
-mAP (Mean Average Precision): 91.64%
-
-Final Training Loss: 0.1527
-
-Best Validation Accuracy: 92.3%
-
-🌍 Deployment
-
-The model can be integrated into CI/CD pipelines for automated branding checks.
-
-$ docker build -t retinanet-app .
-$ docker run -p 5000:5000 retinanet-app
-
-📝 Contributions
-
-Contributions are welcome! Please follow these steps:
-
-Fork the repository.
-
-Create a new branch (feature/new-feature).
-
-Commit your changes.
-
-Push to your branch and submit a PR.
-
-📜 License
-
-This project is licensed under the MIT License.
-
-💡 Acknowledgments
-
-RetinaNet: Original Paper
-
-PyTorch: Documentation
-
-OpenCV: Documentation
-
-🔗 GitHub Repository: https://github.com/Soumyojyotisaha/RetinaNet
-
+---
+Feel free to contribute or reach out for collaboration! 🚀
