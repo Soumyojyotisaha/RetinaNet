@@ -1,0 +1,14 @@
+{
+    "epoch_losses": [
+        {"epoch": 1, "avg_loss": 0.8415},
+        {"epoch": 2, "avg_loss": 0.5147},
+        {"epoch": 3, "avg_loss": 0.3534},
+        {"epoch": 4, "avg_loss": 0.3053},
+        {"epoch": 5, "avg_loss": 0.2475},
+        {"epoch": 6, "avg_loss": 0.1712},
+        {"epoch": 7, "avg_loss": 0.1444},
+        {"epoch": 8, "avg_loss": 0.1285},
+        {"epoch": 9, "avg_loss": 0.1529},
+        {"epoch": 10, "avg_loss": 0.1527}
+    ]
+}

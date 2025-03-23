@@ -1,0 +1,132 @@
+{
+  "branding_guidelines": {
+    "co_branding": {
+      "content_design": "Your content should match your brand's design, not FIS's brand.",
+      "logo_placement": {
+        "your_logo": "Upper left",
+        "fis_logo": "Lower right"
+      },
+      "positioning": "FIS must be positioned as a partner, not as an endorsed brand.",
+      "prohibited": "Do not use 'Powered by Your Name' with FIS branding."
+    },
+    "logo_usage": {
+      "general_rules": "Content must not reflect the FIS brand but must follow logo placement rules.",
+      "prohibited": [
+        "FIS logo lockups with the tagline are NOT allowed.",
+        "Do NOT use the FIS | Worldpay logo."
+      ]
+    },
+    "worldpay_logo_usage": {
+      "allowed": "If you sell Worldpay solutions, you may use the Worldpay logo.",
+      "product_naming": {
+        "correct": "Worldpay FraudSight",
+        "incorrect": "Worldpay from FIS FraudSight"
+      },
+      "prohibited": "Do NOT create a new logo by combining a product name with the Worldpay logo."
+    },
+    "logo_scaling": {
+      "same_scale": "Your logo and FIS logos should appear at the same scale.",
+      "clear_space": "Minimum clear space around the logo must be the width of 'S' in the FIS logo.",
+      "minimum_size": "0.25 inches (cap-height).",
+      "positioning": "FIS logo must always be horizontal and read left to right.",
+      "prohibited": "Do NOT rotate, distort, or position the FIS logo vertically, backward, or upside down."
+    },
+    "legal_media_compliance": {
+      "pr_approval": "All PR, media, and social media posts mentioning FIS must be approved by FIS Corporate Communications.",
+      "contact": "CorporateCommunications@FISglobal.com",
+      "legal_disclaimer": "FIS and the FIS logo are trademarks or registered trademarks of FIS or its subsidiaries in the U.S. and/or other countries. Other companies' trademarks are their property."
+    },
+    "visual_identity": {
+      "color_palette": {
+        "core_color": {
+          "name": "FIS Green",
+          "hex": "#4BCD3E",
+          "rgb": "75, 205, 62",
+          "cmyk": "62, 0, 100, 0",
+          "pantone": "2421 C"
+        },
+        "supporting_colors": [
+          {
+            "name": "Dark Green",
+            "hex": "#012834",
+            "rgb": "1, 40, 52",
+            "cmyk": "94, 69, 55, 61",
+            "pantone": "5463 C"
+          },
+          {
+            "name": "White",
+            "hex": "#FFFFFF",
+            "rgb": "255, 255, 255",
+            "cmyk": "0, 0, 0, 0"
+          }
+        ],
+        "hero_gradients": [
+          {
+            "name": "Gradient Purple",
+            "hex": "#A18CDE",
+            "rgb": "161, 140, 222",
+            "cmyk": "38, 46, 0, 0",
+            "pantone": "2101 C"
+          },
+          {
+            "name": "Gradient Blue",
+            "hex": "#3BCFF0",
+            "rgb": "59, 207, 240",
+            "cmyk": "56, 0, 7, 0",
+            "pantone": "3115 C"
+          }
+        ],
+        "accent_colors": [
+          {
+            "name": "Accent Orange",
+            "hex": "#FD8D62",
+            "rgb": "253, 141, 98",
+            "cmyk": "0, 56, 52, 0",
+            "pantone": "2345 C"
+          },
+          {
+            "name": "Accent Red",
+            "hex": "#FF1F3E",
+            "rgb": "255, 31, 62",
+            "cmyk": "0, 90, 70, 0",
+            "pantone": "Red 032 C"
+          }
+        ],
+        "neutral_colors": [
+          {
+            "name": "Neutral Light",
+            "hex": "#F9F5F1",
+            "rgb": "249, 245, 241",
+            "cmyk": "2, 2, 4, 0",
+            "pantone": "7506 C 50%"
+          },
+          {
+            "name": "Neutral Dark",
+            "hex": "#E8DBCB",
+            "rgb": "232, 219, 203",
+            "cmyk": "8, 12, 19, 0",
+            "pantone": "7506 C"
+          }
+        ]
+      },
+      "typography": {
+        "primary_typeface": "Clan",
+        "headlines": "Clan Ultra, all uppercase",
+        "subheads": "Clan Ultra, sentence case",
+        "body_copy": "Source Sans Pro (Light, Regular, Semibold, Bold)",
+        "desktop_substitute": {
+          "headlines": "Arial Black",
+          "body_copy": "Arial Regular and Bold"
+        }
+      },
+      "photography": {
+        "style": "Vibrant, storytelling, unposed, active, captured in the moment.",
+        "usage": "Images may be used with or without a hero gradient overlay. Hero gradients reserved for primary use cases."
+      },
+      "graphic_elements": {
+        "balance_line": "Bisects the hero panel right in the middle, always a 50/50 split of any given layout.",
+        "content_box": "White content box used in conjunction with the balance line."
+      }
+    }
+  }
+}
