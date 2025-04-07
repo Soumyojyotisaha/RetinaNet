@@ -1,53 +1,37 @@
-import json
 import matplotlib.pyplot as plt
 import numpy as np
 
-# ✅ Load loss history from JSON
-with open("loss_history.json", "r") as f:
-    loss_data = json.load(f)
+# Data for current and new processes
+current_steps = [
+    "Dev creates ticket", "Expert reviews ticket", "Expert reviews UI changes",
+    "Expert approves/rejects PR", "Dev reworks page", "New ticket raised",
+    "Different expert reviews new ticket", "Expert recommends changes"
+]
+current_times = [1.0, 1.0, 1.0, 0.5, 2.0, 1.0, 1.5, 0.5]
 
-# ✅ Extract loss values
-if "epoch_losses" in loss_data and isinstance(loss_data["epoch_losses"], list):
-    loss_values = [epoch["avg_loss"] for epoch in loss_data["epoch_losses"]]
-    epochs = [epoch["epoch"] for epoch in loss_data["epoch_losses"]]
-else:
-    raise ValueError("⚠️ Unexpected JSON format! Expected 'epoch_losses' key.")
+new_steps = [
+    "Dev creates product & runs tool", "Tool generates reports",
+    "Dev makes changes & sends PR", "Tester uses tool to test"
+]
+new_times = [0.25, 0.1, 1.0, 0.6]
 
-# ✅ Print key loss values
-final_loss = loss_values[-1]
-min_loss = min(loss_values)
-max_loss = max(loss_values)
+# Combine and align data
+all_steps = current_steps + new_steps
+process_labels = ['Current'] * len(current_steps) + ['New'] * len(new_steps)
+times = current_times + new_times
 
-print(f"📊 Training Loss Summary:")
-print(f"   🔹 Final Loss: {final_loss:.4f}")
-print(f"   🔹 Min Loss: {min_loss:.4f}")
-print(f"   🔹 Max Loss: {max_loss:.4f}")
+# Create bar positions and colors
+y_pos = np.arange(len(all_steps))
+colors = ['royalblue' if label == 'Current' else 'darkgreen' for label in process_labels]
 
-# ✅ Initialize report dictionary
-report = {}
-
-# ✅ Load Mean Average Precision (mAP) and Accuracy from a report (if available)
-try:
-    with open("training_report.json", "r") as f:
-        report = json.load(f)
-except FileNotFoundError:
-    print("⚠️ training_report.json not found. Using default values.")
-
-# ✅ Extract values with default fallback
-mean_map = report.get("mean_map", 0.0)  
-accuracy = report.get("accuracy", np.random.uniform(80, 95))  
-
-print("\n📊 Model Performance:")
-print(f"   ✅ Mean Average Precision (mAP): {mean_map:.4f}")
-print(f"   ✅ Accuracy: {accuracy:.2f}%")
-
-# ✅ Plot Loss Curve
-plt.figure(figsize=(8, 5))
-plt.plot(epochs, loss_values, marker='o', linestyle='-', color='b', label="Avg Loss")
-plt.xlabel("Epochs")
-plt.ylabel("Average Loss")
-plt.title("Training Loss Over Epochs")
-plt.grid()
-plt.legend()
-plt.savefig("training_loss_plot.png")
+# Plotting
+plt.figure(figsize=(12, 8))
+plt.barh(y_pos, times, color=colors)
+plt.yticks(y_pos, all_steps)
+plt.xlabel('Time Taken (hours)')
+plt.title('Comparison of Time Taken: Current vs New Process')
+# Add legend manually
+handles = [plt.Rectangle((0,0),1,1,color='royalblue'), plt.Rectangle((0,0),1,1,color='darkgreen')]
+plt.legend(handles, ['Current Process', 'New Process'])
+plt.tight_layout()
 plt.show()
