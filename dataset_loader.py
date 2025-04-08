@@ -45,3 +45,6 @@ transform = transforms.Compose([
 # Load dataset
 dataset = CustomDataset(csv_file=csv_file, img_dir=img_dir, transform=transform)
 print(f"Dataset loaded with {len(dataset)} samples")
+
+
+https://lucid.app/lucidchart/9b09a0fc-a501-40ee-9112-feb193150b61/edit?viewport_loc=250%2C915%2C2108%2C1006%2C0_0&invitationId=inv_b1165f96-48e3-40d2-a7b0-ea80f041ba0c 
